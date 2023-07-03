@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecohosting</title>
+    <title>Fullstack - Học Lập Trình Để Đi Làm</title>
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="website icon" href="./assets/img/iconbrow.png">
+    <link rel="website icon" href="/product/assets/img/f8-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

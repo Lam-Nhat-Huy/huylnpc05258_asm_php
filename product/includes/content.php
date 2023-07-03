@@ -5,16 +5,12 @@
      </div>
      <div class="content_list">
          <div class="content_list-text">
-             <span class="content_title animate__animated animate__fadeInLeft">Best Domain & hosting service
-                 provider</span>
-             <span class="content_heading animate__animated animate__fadeInLeft">Powerful web <br>
-                 hosting</span>
-             <span class="content_text animate__animated animate__fadeInLeft">Supercharge your WordPress hosting
-                 with detailed
-                 website analytics, marketing tools, security, and data
-                 backups all in one place.</span>
-             <a href="./assets/src/getstart.main.html"
-                 class="login_item btn animate__animated  animate__fadeInBottomRight">Get Started</a>
+             <span class="content_title animate__animated animate__fadeInLeft">Học lập trình để đi làm</span>
+             <span class="content_heading animate__animated animate__fadeInLeft">Fullstack <br>
+                 Education</span>
+             <span class="content_text animate__animated animate__fadeInLeft">F8 được nhắc tới ở mọi nơi, ở đâu có cơ
+                 hội việc làm cho nghề IT và có những con người yêu thích lập trình F8 sẽ ở đó.</span>
+             <a href="./assets/src/getstart.main.html" class="login_item btn animate__animated  animate__fadeInBottomRight">Bắt Đầu</a>
 
          </div>
 

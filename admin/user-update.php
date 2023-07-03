@@ -20,29 +20,29 @@ include '../config/database.php';
                 if (mysqli_num_rows($sql) > 0) {
                     $user = mysqli_fetch_array($sql);
                 ?>
-                <form action="code.php" method="post">
-                    <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                    <div class="mb-3">
-                        <label for="">Name: </label>
-                        <input type="text" class="form-control" name="name" value="<?= $user['name'] ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="">Phone: </label>
-                        <input type="text" class="form-control" name="phone" value="<?= $user['phone'] ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="">Email: </label>
-                        <input type="email" class="form-control" name="email" value="<?= $user['email'] ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="">Select Role</label>
-                        <input type="text" class="form-control" name="role" value="<?= $user['role'] ?>">
+                    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+                        <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                        <div class="mb-3">
+                            <label for="">Name: </label>
+                            <input type="text" class="form-control" name="name" value="<?= $user['name'] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Phone: </label>
+                            <input type="text" class="form-control" name="phone" value="<?= $user['phone'] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Email: </label>
+                            <input type="email" class="form-control" name="email" value="<?= $user['email'] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Select Role</label>
+                            <input type="text" class="form-control" name="role" value="<?= $user['role'] ?>">
 
-                    </div>
-                    <div class="mb-3">
-                        <button type="submit" name="updateUser" class="btn btn-primary">Lưu</button>
-                    </div>
-                </form>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" name="updateUser" class="btn btn-primary">Lưu</button>
+                        </div>
+                    </form>
                 <?php
                 }
                 ?>
