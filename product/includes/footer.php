@@ -51,8 +51,13 @@
 
         </div>
         <div class="footer-list-item">
-            <img src="./assets/img/logo.png.webp" alt="" class="footer_img">
-            <span class="footer_text-list">Subscribe our newsletter to get updates about our services</span>
+            <div class="header_logo">
+                <a href="" class="header_logo-link">
+                    Fullstack
+                </a>
+            </div>
+            <span class="footer_text-list">F8 được nhắc tới ở mọi nơi, ở đâu có cơ hội việc làm cho nghề IT và có những
+                con người yêu thích lập trình F8 sẽ ở đó.</span>
             <input type="text" class="footer_input-email" placeholder="Email Address">
             <button class="footer_btn" type="submit">Subcribe</button>
         </div>

@@ -8,7 +8,6 @@ if (mysqli_num_rows($sql) > 0) {
     $countUsers = mysqli_num_rows($sql);
 }
 ?>
-
 <div class="row">
     <div class="card shadow-lg">
         <div class="card-header">
@@ -31,8 +30,6 @@ if (mysqli_num_rows($sql) > 0) {
     $countProducts = mysqli_num_rows($sql);
 }
 ?>
-
-
 <div class="row mt-5">
     <div class="card shadow-lg">
         <div class="card-header">

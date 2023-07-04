@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Add User
+                    Thêm Người Dùng
                     <a href="./user.php" class="btn btn-danger float-end">Trở Về</a>
                 </h4>
             </div>
@@ -14,11 +14,11 @@
 
                 <form action="code.php" method="post">
                     <div class="mb-3">
-                        <label for="">Name: </label>
+                        <label for="">Họ Và Tên: </label>
                         <input type="text" class="form-control" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="">Phone: </label>
+                        <label for="">Điện Thoại: </label>
                         <input type="text" class="form-control" name="phone">
                     </div>
                     <div class="mb-3">
@@ -26,13 +26,12 @@
                         <input type="email" class="form-control" name="email">
                     </div>
                     <div class="mb-3">
-                        <label for="">Password: </label>
+                        <label for="">Mật Khẩu: </label>
                         <input type="password" class="form-control" name="password">
                     </div>
                     <div class="mb-3">
-                        <label for="">Select Role</label>
+                        <label for="">Vai Trò</label>
                         <select name="role" class="form-select">
-                            <option value="">Select Role</option>
                             <option value="admin">Admin</option>
                             <option value="user">User</option>
                         </select>

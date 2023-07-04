@@ -32,8 +32,8 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Dịch Vụ</h6>
             </div>
             <li class="nav-item">
-                <a class="nav-link  " href="/admin/formvalidate.php">
-                    <span class="nav-link-text ms-1">Đăng Ký / Đăng Nhập</span>
+                <a class="nav-link  " href="/admin/login.php">
+                    <span class="nav-link-text ms-1">Đăng Nhập</span>
                 </a>
             </li>
 
@@ -42,7 +42,7 @@
             </div>
             <li class="nav-item">
                 <a class="nav-link  " href="/admin/product.php">
-                    <span class="nav-link-text ms-1">Danh Sách Sản Phẩm</span>
+                    <span class="nav-link-text ms-1">Danh Sách Khóa Học</span>
                 </a>
             </li>
         </ul>

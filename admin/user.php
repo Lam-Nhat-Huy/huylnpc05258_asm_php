@@ -16,11 +16,11 @@
                     <thead>
                         <tr class="font-weight-bolder">
                             <td>ID</td>
-                            <td>Name</td>
+                            <td>Họ Và Tên</td>
                             <td>Email</td>
-                            <td>Phone</td>
-                            <td>Role</td>
-                            <td>Acction</td>
+                            <td>Điện Thoại</td>
+                            <td>Vài Trò</td>
+                            <td>Chức Năng</td>
                         </tr>
                     </thead>
                     <tbody>

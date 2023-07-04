@@ -15,15 +15,15 @@
 
                 <form action="code.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="">Name: </label>
+                        <label for="">Họ Và Tên: </label>
                         <input type="text" class="form-control" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="">Price: </label>
+                        <label for="">Giá: </label>
                         <input type="number" class="form-control" name="price">
                     </div>
                     <div class="mb-3">
-                        <label for="">Description: </label>
+                        <label for="">Mô Tả: </label>
                         <input type="text" class="form-control" name="description">
                     </div>
                     <div class="mb-3">
