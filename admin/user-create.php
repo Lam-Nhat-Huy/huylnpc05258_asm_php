@@ -12,7 +12,7 @@
                 <!-- thông báo  -->
                 <?= alertMessage(); ?>
 
-                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+                <form action="code.php" method="post">
                     <div class="mb-3">
                         <label for="">Name: </label>
                         <input type="text" class="form-control" name="name">
