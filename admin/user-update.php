@@ -20,7 +20,7 @@ include '../config/database.php';
                 if (mysqli_num_rows($sql) > 0) {
                     $user = mysqli_fetch_array($sql);
                 ?>
-                    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+                    <form action="code.php" method="post">
                         <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
                         <div class="mb-3">
                             <label for="">Name: </label>

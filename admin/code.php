@@ -2,6 +2,7 @@
 include '../config/database.php';
 include '../config/function.php';
 
+
 // Thêm người dùng
 
 if (isset($_POST['saveUser'])) {
@@ -66,7 +67,10 @@ if (isset($_POST['login'])) {
     $user = mysqli_fetch_array($reusult, MYSQLI_ASSOC);
     if ($user) {
         if (password_verify($password, $user['password'])) {
+            session_start();
+            $_SESSION['user'] = 'yes';
             header('Location: ../../../product/index.php');
+            die();
         }
     }
 }
@@ -76,11 +80,26 @@ if (isset($_POST['login'])) {
 
 if (isset($_POST['addProduct'])) {
     $name = validate($_POST['name']);
-    $price = validate($_POST['price']);
+    $description = validate($_POST['price']);
     $description = validate($_POST['description']);
     $query = "INSERT INTO products (name, price, description) VALUES ('$name', '$price', '$description')";
     $sql = mysqli_query($conn, $query);
     if ($sql) {
         redirect('product.php', 'Sản Phẩm Đã Được Thêm Thành Công');
+    }
+}
+
+
+// Chỉnh sửa sản phẩm
+
+if (isset($_POST['updateProduct'])) {
+    $product_id = validate($_POST['product_id']);
+    $name = validate($_POST['name']);
+    $price = validate($_POST['price']);
+    $description = validate($_POST['description']);
+    $query = "UPDATE products SET name='$name', price='$price', description='$description'  WHERE id= $product_id ";
+    $sql = mysqli_query($conn, $query);
+    if ($sql) {
+        redirect('product.php', 'Sản Phẩm Đã Được Chỉnh Sửa Thành Công');
     }
 }

@@ -24,17 +24,26 @@ if (mysqli_num_rows($sql) > 0) {
     </div>
 </div>
 
+<?php
+$query = 'SELECT * FROM products';
+$sql = mysqli_query($conn, $query);
+if (mysqli_num_rows($sql) > 0) {
+    $countProducts = mysqli_num_rows($sql);
+}
+?>
+
+
 <div class="row mt-5">
     <div class="card shadow-lg">
         <div class="card-header">
             <h4>Bảng Điều Khiển</h4>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Số lượng sản phẩm: </h5>
+            <h5 class="card-title">Số lượng khóa học: </h5>
             <p class="card-text">
-            <h5><strong><?php echo $countUsers;  ?></strong></h5>
+            <h5><strong><?php echo $countProducts ?></strong></h5>
             </p>
-            <a href="./user.php " class="btn btn-primary">Kiểm tra</a>
+            <a href="./product.php " class="btn btn-primary">Kiểm tra</a>
         </div>
     </div>
 </div>
