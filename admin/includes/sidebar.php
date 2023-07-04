@@ -38,6 +38,15 @@
                     <span class="nav-link-text ms-1">Đăng Ký / Đăng Nhập</span>
                 </a>
             </li>
+
+            <div class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Sản Phẩm</h6>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link  " href="/admin/product.php">
+                    <span class="nav-link-text ms-1">Danh Sách Sản Phẩm</span>
+                </a>
+            </li>
         </ul>
     </div>
     <div class="sidenav-footer mx-3 ">

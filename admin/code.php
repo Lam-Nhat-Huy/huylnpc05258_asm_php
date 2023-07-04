@@ -56,8 +56,8 @@ if (isset($_POST['deleteUser'])) {
         redirect('user.php', 'Something went wrong');
     }
 }
-// Chức năng đăng nhập
 
+// Chức năng đăng nhập
 if (isset($_POST['login'])) {
     $email = validate($_POST['email']);
     $password = validate($_POST['password']);
@@ -68,5 +68,19 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $user['password'])) {
             header('Location: ../../../product/index.php');
         }
+    }
+}
+
+
+// Thêm sản phẩm
+
+if (isset($_POST['addProduct'])) {
+    $name = validate($_POST['name']);
+    $price = validate($_POST['price']);
+    $description = validate($_POST['description']);
+    $query = "INSERT INTO products (name, price, description) VALUES ('$name', '$price', '$description')";
+    $sql = mysqli_query($conn, $query);
+    if ($sql) {
+        redirect('product.php', 'Sản Phẩm Đã Được Thêm Thành Công');
     }
 }

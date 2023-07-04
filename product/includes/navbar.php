@@ -45,6 +45,10 @@
                 </div>
             </div>
         </div>
+        <a type="button" class="cart" href="../../product/includes/logout.php">
+            Đăng Xuất
+        </a>
     </div>
+
 
 </header>
