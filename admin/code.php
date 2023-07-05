@@ -104,10 +104,12 @@ if (isset($_POST['addProduct'])) {
 if (isset($_POST['updateProduct'])) {
     $product_id = validate($_POST['product_id']);
     $name = validate($_POST['name']);
+    $image = validate($_POST['image']);
     $price = validate($_POST['price']);
     $description = validate($_POST['description']);
-    $query = "UPDATE products SET name='$name', price='$price', description='$description'  WHERE id= $product_id ";
+    $query = "UPDATE products SET name='$name',image='$image', price='$price', description='$description'  WHERE id= $product_id ";
     $sql = mysqli_query($conn, $query);
+
     if ($sql) {
         redirect('product.php', 'Sản Phẩm Đã Được Chỉnh Sửa Thành Công');
     }

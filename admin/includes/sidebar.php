@@ -1,6 +1,8 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
+    id="sidenav-main">
     <div class="sidenav-header">
-        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+            aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0 d-flex justify-content-evenly" href="index.php">
             <img src="/admin/assets/img/logo-ct-dark.png" alt="" class="navbar-brand-img h-10 px-2">
             <h4>Admin Control</h4>
@@ -27,7 +29,14 @@
                     <span class="nav-link-text ms-1">Danh Sách Người Dùng</span>
                 </a>
             </li>
-
+            <div class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Sản Phẩm</h6>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link  " href="/admin/product.php">
+                    <span class="nav-link-text ms-1">Danh Sách Khóa Học</span>
+                </a>
+            </li>
             <div class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Dịch Vụ</h6>
             </div>
@@ -37,14 +46,7 @@
                 </a>
             </li>
 
-            <div class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder ">Quản Lý Sản Phẩm</h6>
-            </div>
-            <li class="nav-item">
-                <a class="nav-link  " href="/admin/product.php">
-                    <span class="nav-link-text ms-1">Danh Sách Khóa Học</span>
-                </a>
-            </li>
+
         </ul>
     </div>
     <div class="sidenav-footer mx-3 ">
