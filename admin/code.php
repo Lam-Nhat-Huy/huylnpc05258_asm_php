@@ -67,11 +67,12 @@ if (isset($_POST['login'])) {
     $user = mysqli_fetch_array($reusult, MYSQLI_ASSOC);
     if ($user) {
         if (password_verify($password, $user['password'])) {
-            session_start();
-            $_SESSION['user'] = 'yes';
             header('Location: ../../../product/index.php');
             die();
         }
+    } else {
+        header('Location: login.php');
+        redirect('login.php', 'Tên Tài Khoản Hoặc Mật Khẩu Không Đúng');
     }
 }
 

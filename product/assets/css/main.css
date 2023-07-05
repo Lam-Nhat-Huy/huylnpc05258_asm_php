@@ -77,7 +77,16 @@ header {
   padding: 0 12px;
 }
 
+.header_logo-link:hover {
+  color: #fff;
+}
 .nav_list-link:hover {
+  color: #e05eee;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: 0.2s;
+}
+.cart:hover {
   color: #e05eee;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -372,7 +381,7 @@ header {
   margin-bottom: 50px;
 }
 .cart {
-  margin-left: 12px;
+  margin-left: 32px;
 }
 .cart-item {
   list-style: none;
