@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h4>
                     Thêm Sản Phẩm
-                    <a href="./user.php" class="btn btn-danger float-end">Trở Về</a>
+                    <a href="./product.php" class="btn btn-danger float-end">Trở Về</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -15,12 +15,16 @@
 
                 <form action="code.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="">Họ Và Tên: </label>
+                        <label for="">Tên Khóa Học: </label>
                         <input type="text" class="form-control" name="name">
                     </div>
                     <div class="mb-3">
+                        <label for="">Hình Ảnh: </label>
+                        <input type="file" class="form-control" name="image">
+                    </div>
+                    <div class="mb-3">
                         <label for="">Giá: </label>
-                        <input type="number" class="form-control" name="price">
+                        <input type="text" class="form-control" name="price">
                     </div>
                     <div class="mb-3">
                         <label for="">Mô Tả: </label>

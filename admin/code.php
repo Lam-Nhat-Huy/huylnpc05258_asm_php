@@ -77,21 +77,29 @@ if (isset($_POST['login'])) {
 }
 
 
-// Thêm sản phẩm
+// Thêm khóa học
 
 if (isset($_POST['addProduct'])) {
     $name = validate($_POST['name']);
-    $description = validate($_POST['price']);
+
+    $image = validate($_FILES['image']['name']);
+    $image_tmp = validate($_FILES['image']['tmp_name']);
+
+    $price = validate($_POST['price']);
     $description = validate($_POST['description']);
-    $query = "INSERT INTO products (name, price, description) VALUES ('$name', '$price', '$description')";
+    $query = "INSERT INTO products (name, image, price, description) VALUES ('$name', '$image', '$price', '$description')";
     $sql = mysqli_query($conn, $query);
+
+    move_uploaded_file($image_tmp, './assets/img' . $image);
+
+
     if ($sql) {
         redirect('product.php', 'Sản Phẩm Đã Được Thêm Thành Công');
     }
 }
 
 
-// Chỉnh sửa sản phẩm
+// Chỉnh sửa khóa học
 
 if (isset($_POST['updateProduct'])) {
     $product_id = validate($_POST['product_id']);
@@ -102,5 +110,18 @@ if (isset($_POST['updateProduct'])) {
     $sql = mysqli_query($conn, $query);
     if ($sql) {
         redirect('product.php', 'Sản Phẩm Đã Được Chỉnh Sửa Thành Công');
+    }
+}
+
+// Xóa khóa học
+
+if (isset($_POST['deleteProduct'])) {
+    $product_id = mysqli_real_escape_string($conn, $_POST['deleteProduct']);
+    $query = "DELETE FROM products WHERE id = $product_id";
+    $sql = mysqli_query($conn, $query);
+    if ($sql) {
+        redirect('product.php', 'Product deleted successfully');
+    } else {
+        redirect('product.php', 'Something went wrong');
     }
 }

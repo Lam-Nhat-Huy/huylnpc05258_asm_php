@@ -28,6 +28,10 @@ include '../config/database.php';
                                 <input type="text" class="form-control" name="name" value="<?= $product['name'] ?>">
                             </div>
                             <div class="mb-3">
+                                <label for="">Hình Ảnh: </label>
+                                <input type="file" class="form-control" name="image" value="<?= $product['image'] ?>">
+                            </div>
+                            <div class="mb-3">
                                 <label for="">Price: </label>
                                 <input type="number" class="form-control" name="price" value="<?= $product['price'] ?>">
                             </div>
