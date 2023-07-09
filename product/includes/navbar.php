@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <a type="button" class="cart" href="../../product/includes/logout.php">
+        <a type="button" class="cart" href="../../admin/logout.php">
             Đăng Xuất
         </a>
     </div>
