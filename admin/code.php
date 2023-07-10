@@ -58,23 +58,7 @@ if (isset($_POST['deleteUser'])) {
     }
 }
 
-// Chức năng đăng nhập
-if (isset($_POST['login'])) {
-    $email = validate($_POST['email']);
-    $password = validate($_POST['password']);
-    $query = "SELECT * FROM users WHERE email='$email'";
-    $reusult = mysqli_query($conn, $query);
-    $user = mysqli_fetch_array($reusult, MYSQLI_ASSOC);
-    if ($user) {
-        if (password_verify($password, $user['password'])) {
-            header('Location: ../../../product/index.php');
-            die();
-        }
-    } else {
-        header('Location: login.php');
-        redirect('login.php', 'Tên Tài Khoản Hoặc Mật Khẩu Không Đúng');
-    }
-}
+
 
 
 // Thêm khóa học
@@ -125,5 +109,25 @@ if (isset($_POST['deleteProduct'])) {
         redirect('product.php', 'Khóa học đã được xóa thành công');
     } else {
         redirect('product.php', 'Lỗi');
+    }
+}
+
+
+
+// Chức năng đăng nhập
+if (isset($_POST['login'])) {
+    $email = validate($_POST['email']);
+    $password = validate($_POST['password']);
+    $query = "SELECT * FROM users WHERE email='$email'";
+    $reusult = mysqli_query($conn, $query);
+    $user = mysqli_fetch_array($reusult, MYSQLI_ASSOC);
+    if ($user) {
+        if (password_verify($password, $user['password'])) {
+            header('Location: ../../../product/index.php');
+            die();
+        }
+    } else {
+        header('Location: login.php');
+        redirect('login.php', 'Tên Tài Khoản Hoặc Mật Khẩu Không Đúng');
     }
 }

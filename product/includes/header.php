@@ -1,6 +1,8 @@
 <?php
 include '../config/function.php';
 include '../config/database.php';
+$user_id = $_SESSION['user_id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

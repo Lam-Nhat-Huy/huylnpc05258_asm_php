@@ -36,12 +36,51 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <div class="shopping-cart">
+                            <table class="table">
+                                <thead>
+                                    <td>Name</td>
+                                    <td>Image</td>
+                                    <td>Description</td>
+                                    <td>Acction</td>
+                                </thead>
 
+                                <tbody>
+                                    <?php
+                                    $query_cart = mysqli_query($conn, "SELECT * FROM cart");
+                                    if (mysqli_num_rows($query_cart) > 0) {
+                                        while ($row = mysqli_fetch_array($query_cart)) {
+                                    ?>
+                                            <tr>
+                                                <td><?php echo $row['name'] ?></td>
+                                                <td>
+                                                    <img src="./assets/img/<?php echo $row['image']; ?>" height="50" width="106px" alt="">
+                                                </td>
+                                                <td><?php echo $row['description'] ?></td>
+
+                                                <td>
+                                                    <form action="" method="post">
+                                                        <button class="btn btn-danger">Xóa</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                    <?php
+                                        }
+                                    }
+
+
+
+                                    ?>
+                                </tbody>
+
+
+                            </table>
+                        </div>
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" name="signup" class="btn btn-primary">Sign up</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
