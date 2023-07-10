@@ -18,9 +18,9 @@ if (isset($_POST['saveUser'])) {
         $query = "INSERT INTO users (name, phone, email, password, is_ban, role) VALUES ('$name','$phone', '$email','$hash', '$is_ban','$role')";
         $sql = mysqli_query($conn, $query);
         if ($sql) {
-            redirect('user.php', 'User / Admin Added Successfully');
+            redirect('user.php', 'Thêm thông tin thành công');
         } else {
-            redirect('user-create.php', 'Something went wrong');
+            redirect('user-create.php', 'Lỗi');
         }
     } else {
         redirect('user-create.php', 'Vui lòng nhập tất cả trường');
@@ -39,9 +39,9 @@ if (isset($_POST['updateUser'])) {
     $query = "UPDATE users SET name='$name', phone='$phone', email='$email', role='$role' WHERE id= $user_id ";
     $sql = mysqli_query($conn, $query);
     if ($sql) {
-        redirect('user.php', 'User Deleted successfully');
+        redirect('user.php', 'Chỉnh sửa thông tin thành công');
     } else {
-        redirect('user.php', 'Something went wrong');
+        redirect('user.php', 'Lỗi');
     }
 }
 
@@ -52,9 +52,9 @@ if (isset($_POST['deleteUser'])) {
     $query = "DELETE FROM users WHERE id = $user_id";
     $sql = mysqli_query($conn, $query);
     if ($sql) {
-        redirect('user.php', 'User deleted successfully');
+        redirect('user.php', 'Xóa người dùng thành công');
     } else {
-        redirect('user.php', 'Something went wrong');
+        redirect('user.php', 'Lỗi');
     }
 }
 
@@ -122,8 +122,8 @@ if (isset($_POST['deleteProduct'])) {
     $query = "DELETE FROM products WHERE id = $product_id";
     $sql = mysqli_query($conn, $query);
     if ($sql) {
-        redirect('product.php', 'Product deleted successfully');
+        redirect('product.php', 'Khóa học đã được xóa thành công');
     } else {
-        redirect('product.php', 'Something went wrong');
+        redirect('product.php', 'Lỗi');
     }
 }
