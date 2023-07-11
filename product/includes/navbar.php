@@ -58,11 +58,6 @@
                                                 </td>
                                                 <td><?php echo $row['description'] ?></td>
 
-                                                <td>
-                                                    <form action="" method="post">
-                                                        <button class="btn btn-danger">Xóa</button>
-                                                    </form>
-                                                </td>
                                             </tr>
                                     <?php
                                         }

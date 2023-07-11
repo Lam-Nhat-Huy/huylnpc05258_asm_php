@@ -5,12 +5,8 @@
             $product_name = validate($_POST['product_name']);
             $product_image = validate($_POST['product_image']);
             $product_description = validate($_POST['product_description']);
-            $selecte_course = mysqli_query($conn, "SELECT * FROM cart WHERE user_id = '$user_id'");
-            if (mysqli_num_rows($selecte_course) > 0) {
-                $message[] = 'Product already added to cart';
-            } else {
-                mysqli_query($conn, "INSERT INTO `cart` (name, image, description) VALUES ('$product_name','$product_image', '$product_description')")  or die('query failed');
-            }
+
+            $select_cart = mysqli_query($conn, "INSERT INTO `cart` (name, image, description) VALUES ('$product_name','$product_image', '$product_description')")  or die('query failed');
         }
         ?>
 
